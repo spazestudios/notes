@@ -1,6 +1,8 @@
 <input id="inid" type="text">
 <p></p>
 <button style="display:block;margin:auto;"type="test" onclick="getn();" id="demo">view</button>
+<button style="display:block;margin:auto;"type="test" onclick="back();" id="demo">back</button>
+
 <div id="notes" style="font-family:Verdana;font-size:16px;font-style:Bold;color:grey;text-align: center;">your note will go here</div>
 <head>
   <link rel="stylesheet" href="styles.css">
@@ -38,4 +40,7 @@ let noter = localStorage.getItem(inid.value);
 var div = document.querySelector("#notes");
 div.textContent = noter;  
 }
+function back() {
+window.location.replace("index.html");
+} 
 </script>
