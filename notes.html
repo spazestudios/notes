@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<button style="display:block;margin:auto;"type="test" onclick="get();" id="demo">view</button>
+<p></p>
+<button style="display:block;margin:auto;"type="test" onclick="redi();" id="demo">+</button>
+  <p></p>
+<button style="display:block;margin:auto;"type="test" onclick="getwid();" id="demo">view with id</button>
+<p></p>
+<div id="notes"style="font-family:Verdana;font-size:16px;font-style:Bold;color:grey;text-align: center;">your note will go here</div>
+
+  
+  
+
+<script>
+function redi() {
+  window.location.replace("nnote.html");
+}
+function getwid() {
+  window.location.replace("getwid.html");
+}
+function get(){
+  // Retrieve
+let noter = localStorage.getItem('name');
+var div = document.querySelector("#notes");
+div.textContent = noter;  
+}
+</script>
+<style>
+    button {
+  background-color: #af06a8; 
+  border: 2px solid #000029;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  }
+</style>
+</html>

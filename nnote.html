@@ -1,0 +1,73 @@
+	<p style="font-family:Verdana;font-size:16px;font-style:Bold;color:black;text-align: center;">
+
+		if you plan on using multiple notes
+
+	</p>
+	<p style="font-family:Verdana;font-size:16px;font-style:Bold;color:grey;text-align: center;">
+
+save the ids of those notes in the first note!
+	</p>
+<input id="post" type="text">
+<p></p>
+<button style="display:block;margin:auto;"type="test" onclick="save();" id="demo">replace</button>
+<p></p>
+<button style="display:block;margin:auto;"type="test" onclick="savenew();" id="demo">save as new</button>
+<p></p>
+<button style="display:block;margin:auto;"type="test" onclick="get();" id="demo">view current note</button>
+<div id="notes" style="font-family:Verdana;font-size:16px;font-style:Bold;color:grey;text-align: center;">your current note</div>
+
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    button {
+  background-color: #af06a8; 
+  border: 2px solid #000029;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  }
+input[type=text]{   
+  background-color: #af06a8; /* Green */
+  border: 2px solid #000029;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    text-align: center;
+    display:block;
+    margin:auto;
+
+    
+  }
+</style>
+<script>
+       function save() {
+var myId = post.value;
+localStorage.setItem('name', myId);
+window.location.replace("notes.html");
+
+
+} 
+       function savenew() {
+var postid = Math.floor((Math.random() * 100000) + 1);
+alert(postid)
+var myId = post.value;
+localStorage.setItem(postid, myId);
+window.location.replace("notes.html");
+
+
+}  
+function get(){
+  // Retrieve
+let noter = localStorage.getItem('name');
+var div = document.querySelector("#notes");
+div.textContent = noter;  
+}
+</script>
