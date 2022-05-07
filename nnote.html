@@ -14,6 +14,8 @@ save the ids of those notes in the first note!
 <button style="display:block;margin:auto;"type="test" onclick="savenew();" id="demo">save as new</button>
 <p></p>
 <button style="display:block;margin:auto;"type="test" onclick="get();" id="demo">view current note</button>
+<p></p>
+<button style="display:block;margin:auto;"type="test" onclick="back();" id="demo">back</button>
 <div id="notes" style="font-family:Verdana;font-size:16px;font-style:Bold;color:grey;text-align: center;">your current note</div>
 
 
@@ -69,5 +71,8 @@ function get(){
 let noter = localStorage.getItem('name');
 var div = document.querySelector("#notes");
 div.textContent = noter;  
+}
+function back(){
+window.location.replace("index.html");
 }
 </script>
